@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mangla International — Concept Homepage</title>
+<style>
+:root{
+  --bg:#faf8f4;--card:#fff;--ink:#201d19;--muted:#6f6961;
+  --line:#e7e0d7;--gold:#9b7749;--soft:#f1eadf;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+.top{background:#201d19;color:#fff;text-align:center;font-size:11px;letter-spacing:.12em;padding:9px 16px}
+.nav{position:sticky;top:0;z-index:10;background:rgba(250,248,244,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{max-width:1160px;margin:auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:500 28px Georgia,serif;letter-spacing:.09em}
+.links{display:flex;gap:25px;font-size:13px;color:#514b44}
+.cta{border:1px solid var(--ink);border-radius:999px;padding:11px 17px;font-weight:700;font-size:12px}
+.hero{max-width:1160px;margin:auto;padding:76px 22px 48px;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.kicker{text-transform:uppercase;letter-spacing:.17em;font-size:11px;color:var(--gold);font-weight:800}
+h1,h2,h3{font-family:Georgia,serif;font-weight:500}
+h1{font-size:clamp(45px,6vw,76px);line-height:.98;letter-spacing:-.035em;margin:17px 0 23px}
+.hero p{font-size:18px;line-height:1.65;color:var(--muted);max-width:610px}
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:27px}
+.btn{border:1px solid var(--ink);border-radius:999px;padding:14px 20px;font-size:13px;font-weight:800;display:inline-block}
+.btn.dark{background:var(--ink);color:#fff}
+.hero-art{min-height:500px;border-radius:28px;overflow:hidden;position:relative;background:
+radial-gradient(circle at 55% 42%,rgba(255,255,255,.9) 0 7%,transparent 8%),
+linear-gradient(140deg,#eee4d4,#b9935d 48%,#29251f)}
+.hero-art:before{content:"";position:absolute;width:210px;height:210px;border:11px solid rgba(255,255,255,.85);border-radius:50%;left:50%;top:47%;transform:translate(-50%,-50%);box-shadow:0 0 0 9px rgba(155,119,73,.28),0 30px 60px rgba(0,0,0,.22)}
+.hero-art:after{content:"MANGLA · CUSTOM · OEM / ODM";position:absolute;left:25px;bottom:23px;color:#fff;font-size:11px;letter-spacing:.14em}
+.optionbar{max-width:1160px;margin:0 auto;padding:0 22px 25px}
+.options{background:#fff;border:1px solid var(--line);border-radius:20px;padding:17px 18px;display:flex;align-items:center;gap:15px;flex-wrap:wrap}
+.options strong{font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.pill{background:var(--soft);border:1px solid #ded1bd;border-radius:999px;padding:9px 12px;font-size:12px}
+.section{max-width:1160px;margin:auto;padding:78px 22px}
+.head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:29px}
+h2{font-size:clamp(35px,4.5vw,55px);line-height:1.02;margin:7px 0 0}
+.head p{max-width:430px;color:var(--muted);line-height:1.6;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}
+.card{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden}
+.cardart{height:190px;background:linear-gradient(145deg,#eee6d9,#c3a474);position:relative}
+.cardart:before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:88px;height:88px;border:7px solid rgba(255,255,255,.82);border-radius:50%}
+.cardart.ring:before{width:95px;height:95px}
+.cardart.ear:before{width:65px;height:105px;border-radius:50% 50% 45% 45%}
+.cardart.neck:before{width:125px;height:70px;border-radius:50%}
+.cardart.brace:before{width:125px;height:90px;border-radius:48%}
+.cardart.pendant:before{width:70px;height:95px;border-radius:45%}
+.cardbody{padding:14px}.cardbody strong{font:500 19px Georgia,serif}.cardbody span{display:block;color:var(--muted);font-size:11px;margin-top:5px}
+.capabilities{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cap{background:#fff;border:1px solid var(--line);border-radius:21px;padding:25px;min-height:205px}
+.num{font-size:11px;color:var(--gold);font-weight:900;letter-spacing:.12em}
+.cap h3{font-size:25px;margin:15px 0 10px}
+.cap p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+.process{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px}
+.panel h3{font-size:32px;margin:8px 0 12px}
+.panel p{color:var(--muted);line-height:1.65}
+.steps{margin-top:24px}
+.step{display:grid;grid-template-columns:40px 1fr;gap:13px;padding:15px 0;border-top:1px solid var(--line)}
+.circle{width:31px;height:31px;border-radius:50%;background:var(--soft);display:grid;place-items:center;color:#765a35;font-weight:800;font-size:11px}
+.step strong{font-size:14px}.step span{display:block;color:var(--muted);font-size:12px;line-height:1.5;margin-top:4px}
+.quote{background:#211e1a;color:#fff;border-radius:27px;padding:44px;display:flex;justify-content:space-between;gap:30px;align-items:center}
+.quote h2{margin:7px 0 12px}.quote p{color:#d6cec3;line-height:1.6;max-width:640px}
+.quote .btn{background:#fff;border-color:#fff}
+footer{border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:11px;padding:28px 20px}
+@media(max-width:850px){
+ .links{display:none}.hero{grid-template-columns:1fr;padding-top:50px}.hero-art{min-height:390px}
+ .grid{grid-template-columns:repeat(2,1fr)}.capabilities{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:1fr}.quote{display:block}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr 1fr}.capabilities{grid-template-columns:1fr 1fr}.cardart{height:150px}h1{font-size:47px}}
+</style>
+</head>
+<body>
+<div class="top">CONCEPT REDESIGN · SAMPLE ONLY</div>
+
+<nav class="nav">
+  <div class="navin">
+    <a class="logo" href="#">MANGLA</a>
+    <div class="links">
+      <a href="#jewellery">Jewellery</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#process">How It Works</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="cta" href="#contact">Request a Quote</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero">
+  <div>
+    <div class="kicker">Jewellery Manufacturer & Wholesale Supplier · Jaipur</div>
+    <h1>Bring your jewellery ideas to production.</h1>
+    <p>Custom jewellery manufacturing for brands and businesses — from ideas, photos or CAD designs through sample development, production and shipping.</p>
+    <div class="actions">
+      <a class="btn dark" href="#contact">Discuss Your Requirement →</a>
+      <a class="btn" href="#capabilities">See Capabilities</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-label="Jewellery visual placeholder"></div>
+</section>
+
+<div class="optionbar">
+  <div class="options">
+    <strong>Explore</strong>
+    <span class="pill">Custom Jewellery</span>
+    <span class="pill">OEM / ODM</span>
+    <span class="pill">Private Label</span>
+    <span class="pill">Wholesale</span>
+    <span class="pill">Request a Quote</span>
+  </div>
+</div>
+
+<section class="section" id="jewellery">
+  <div class="head">
+    <div><div class="kicker">What Mangla makes</div><h2>Jewellery categories</h2></div>
+    <p>These categories are based on products/categories publicly described by Mangla. Final product photography and exact category structure should be supplied by the business.</p>
+  </div>
+  <div class="grid">
+    <article class="card"><div class="cardart ring"></div><div class="cardbody"><strong>Rings</strong><span>Custom & wholesale</span></div></article>
+    <article class="card"><div class="cardart ear"></div><div class="cardbody"><strong>Earrings</strong><span>Custom & wholesale</span></div></article>
+    <article class="card"><div class="cardart neck"></div><div class="cardbody"><strong>Necklaces</strong><span>Custom & wholesale</span></div></article>
+    <article class="card"><div class="cardart brace"></div><div class="cardbody"><strong>Bracelets</strong><span>Custom & wholesale</span></div></article>
+    <article class="card"><div class="cardart pendant"></div><div class="cardbody"><strong>Pendants</strong><span>Custom & wholesale</span></div></article>
+  </div>
+</section>
+
+<section class="section" id="capabilities">
+  <div class="head">
+    <div><div class="kicker">What they already offer</div><h2>Built around your requirement.</h2></div>
+    <p>No invented services here. This section simply makes existing Mangla capabilities easier for a potential buyer to understand.</p>
+  </div>
+  <div class="capabilities">
+    <article class="cap"><div class="num">01</div><h3>Custom</h3><p>Create jewellery based on your thoughts, reference photos or CAD designs.</p></article>
+    <article class="cap"><div class="num">02</div><h3>OEM / ODM</h3><p>Manufacturing services for jewellery brands and businesses, including customized products.</p></article>
+    <article class="cap"><div class="num">03</div><h3>Private Label</h3><p>Private-label jewellery manufacturing for brands that want products under their own label.</p></article>
+    <article class="cap"><div class="num">04</div><h3>Wholesale</h3><p>Wholesale jewellery manufacturing and supply across listed jewellery categories.</p></article>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="process">
+    <div class="panel">
+      <div class="kicker">From idea to production</div>
+      <h3>A simpler way to understand the journey.</h3>
+      <p>Mangla publicly describes a manufacturing flow that includes pattern making, sample making, production and shipping.</p>
+      <div class="steps">
+        <div class="step"><div class="circle">01</div><div><strong>Share your idea</strong><span>Send your thoughts, photos or CAD designs.</span></div></div>
+        <div class="step"><div class="circle">02</div><div><strong>Pattern & sample making</strong><span>Develop the design toward a sample.</span></div></div>
+        <div class="step"><div class="circle">03</div><div><strong>Production</strong><span>Move the approved requirement into manufacturing.</span></div></div>
+        <div class="step"><div class="circle">04</div><div><strong>Shipping</strong><span>Complete the manufacturing-to-delivery process.</span></div></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="kicker">For growing brands</div>
+      <h3>One manufacturing partner for your collection.</h3>
+      <p>Mangla describes itself as a one-stop solution for small and large jewellery brands, with private-label, OEM/ODM and customization options.</p>
+      <div class="steps">
+        <div class="step"><div class="circle">A</div><div><strong>Low MOQ option</strong><span>Mangla publicly states 50 pieces per design on its private-label pages. Exact MOQ should be confirmed for the specific product.</span></div></div>
+        <div class="step"><div class="circle">B</div><div><strong>Regular updates</strong><span>The company says its production team guides customers through the process and provides updates.</span></div></div>
+        <div class="step"><div class="circle">C</div><div><strong>International supply</strong><span>Mangla describes serving jewellery businesses internationally.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="quote">
+    <div>
+      <div class="kicker" style="color:#c7a775">Start a conversation</div>
+      <h2>Have a design or collection in mind?</h2>
+      <p>Share your requirement, reference images or CAD design and let the team understand what you want to manufacture.</p>
+    </div>
+    <a class="btn" href="#contact">Request a Quote →</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  Concept redesign for demonstration. Product imagery, exact claims, certifications, MOQ, contact details and final navigation should be confirmed by Mangla International before publication.
+</footer>
+</body>
+</html>
